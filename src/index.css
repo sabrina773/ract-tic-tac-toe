@@ -1,13 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{box-sizing: border-box;}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e80b0;
+}
+.btn{
+  background-color: #ffffff;
+  color: #e5dc15;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin: 15px;
+  padding: 15px;
+  border: 2px solid #e5dc15;
+  border-radius: 5px;
+  box-shadow: o 12px #c2bb11, o 8px rgba(0, 0, 0, 0.4);
+  font-size: 60px;
+  width: 90px;
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+  top: o;
+}
+.disabled .btn{
+  cursor: default;
+}
+.disabled .btn:hover {
+  top: 0;
+  background: #ffffff;
+  color: #e5dc15;
+  box-shadow: 0 12px #c2bb11, 0 18px rgba(0, 0, 0, 0.4);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn.disabled {
+  cursor: default;
+}
+.btn.disabled:hover {
+  top: 0;
+  background: #ffffff;
+  color: #e5dc15;
+  box-shadow: 0 12px #c2bb11, 0 18px rgba(0, 0, 0, 0.4);
+}
+.btn:hover {
+  background-color: #e5dc15;
+  color: #0e80b0;
+  top: 4px;
+  box-shadow: o 8px #c2bb11 , o 14px rgba(0, 0, 0, 0.4);
+}
+.btn.active{
+  top: 8px;
+  box-shadow: o 4px #c2bb11 , o 10px rgba(0, 0, 0, 0.4);
+}
+.game{
+  display: flex;
+  flex-wrap: wrap;
+}
+.game-info{
+  margin: 15px;
+  color: #ffffff ;
+}
+.board > div{
+  display: flex;
 }
